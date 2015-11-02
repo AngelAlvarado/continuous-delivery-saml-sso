@@ -13,7 +13,10 @@
     "require": {
 	"drupal/drupal": "7.38",
         "drupal/features": "~7.2",
-        "craychee/rootcanal": "dev-master"
+        "drupal/simplesamlphp_auth": "~7.3",
+        "craychee/rootcanal": "dev-master",
+	"drush/drush": "7.*",
+        "drupal/drupal-extension": "~3.0"
     },
     "repositories": [
         {
