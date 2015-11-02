@@ -632,7 +632,7 @@ function file_field_widget_process($element, &$form_state, $form) {
   $element['#theme'] = 'file_widget';
 
   // Add the display field if enabled.
-  if (!empty($field['settings']['display_field'])) {
+  if (!empty($field['settings']['display_field']) && $item['fid']) {
     $element['display'] = array(
       '#type' => empty($item['fid']) ? 'hidden' : 'checkbox',
       '#title' => t('Include file in display'),

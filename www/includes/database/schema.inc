@@ -92,8 +92,7 @@ require_once dirname(__FILE__) . '/query.inc';
  *    specification). Each specification is an array containing the name of
  *    the referenced table ('table'), and an array of column mappings
  *    ('columns'). Column mappings are defined by key pairs ('source_column' =>
- *    'referenced_column'). This key is for documentation purposes only; foreign
- *    keys are not created in the database, nor are they enforced by Drupal.
+ *    'referenced_column').
  *  - 'indexes':  An associative array of indexes ('indexname' =>
  *    specification). Each specification is an array of one or more
  *    key column specifiers (see below) that form an index on the
@@ -145,8 +144,6 @@ require_once dirname(__FILE__) . '/query.inc';
  *   'unique keys' => array(
  *     'vid' => array('vid'),
  *   ),
- *   // For documentation purposes only; foreign keys are not created in the
- *   // database.
  *   'foreign keys' => array(
  *     'node_revision' => array(
  *       'table' => 'node_revision',

@@ -1,0 +1,35 @@
+{
+    "name": "taxanalysts/taxnotes",
+    "description": "Testing a CI machine",
+    "type": "project",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Angel Alvarado",
+            "email": "angel.robledo@taxanalysts.org"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+	"drupal/drupal": "7.38",
+        "drupal/features": "~7.2",
+        "craychee/rootcanal": "dev-master"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://packagist.drupal-composer.org/"
+        }
+    ],
+    "config": {
+           "bin-dir": "bin"
+     },
+     "scripts": {
+           "post-install-cmd": [
+               "bin/rootcanal"
+           ],
+           "post-update-cmd": [
+               "bin/rootcanal"
+           ]
+     }
+}

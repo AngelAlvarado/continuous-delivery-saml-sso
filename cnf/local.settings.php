@@ -9,3 +9,4 @@ $databases=array('default' => array(
         'host' => 'localhost',
     ),
 ),);
+require_once DRUPAL_ROOT . '/sites/default/vendor/autoload.php';

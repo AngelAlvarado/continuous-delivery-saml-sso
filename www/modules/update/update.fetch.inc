@@ -29,9 +29,7 @@ function update_manual_status() {
 }
 
 /**
- * Implements callback_batch_operation().
- *
- * Processes a step in batch for fetching available update data.
+ * Batch callback: Processes a step in batch for fetching available update data.
  *
  * @param $context
  *   Reference to an array used for Batch API storage.
@@ -79,9 +77,7 @@ function update_fetch_data_batch(&$context) {
 }
 
 /**
- * Implements callback_batch_finished().
- *
- * Performs actions when all fetch tasks have been completed.
+ * Batch callback: Performs actions when all fetch tasks have been completed.
  *
  * @param $success
  *   TRUE if the batch operation was successful; FALSE if there were errors.

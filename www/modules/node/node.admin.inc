@@ -329,8 +329,6 @@ function _node_mass_update_helper($nid, $updates) {
 }
 
 /**
- * Implements callback_batch_operation().
- *
  * Executes a batch operation for node_mass_update().
  *
  * @param array $nodes
@@ -369,9 +367,7 @@ function _node_mass_update_batch_process($nodes, $updates, &$context) {
 }
 
 /**
- * Implements callback_batch_finished().
- *
- * Reports the status of batch operation for node_mass_update().
+ * Menu callback: Reports the status of batch operation for node_mass_update().
  *
  * @param bool $success
  *   A boolean indicating whether the batch mass update operation successfully
