@@ -1,19 +1,15 @@
 #!/bin/bash
 
 set -e
+path=$(dirname "$0") #usually .
+base=$(cd $path/.. && pwd) #keep track of root directory
+drush="drush $drush_flags -y -r $base/www" #prepare drush command to receive argument and always accept(Y)
 
-#where we are, where the project is relative to where we are, and what to do with our drush commands
+chmod -R +w $base/www/sites/default #Make sure  Drupal does not messes up with our permissions
+chmod -R +w $base/cnf # keep our cnf writable
 
-path=$(dirname "$0")
-base=$(cd $path/.. && pwd)
-drush="drush $drush_flags -y -r $base/www"
-
-chmod -R +w $base/www/sites/default
-chmod -R +w $base/cnf
-
-echo "Symlink settings.php into our Drupal."
-ln -sf $base/cnf/settings.php $base/www/sites/default/
+echo "Symlink settings.php into our Drupal.  "
+ln -sf $base/cnf/settings.php $base/www/sites/default/ #from host to guest (vagrant/* folders are already sync by VirtualBox)
 echo "Installing Drupal like a boss."
-$drush si --site-name=taxnotes --account-pass=admin
-$drush cc all
+$drush si --site-name=no-excuses --account-pass=admin
 

@@ -9,6 +9,4 @@
     - nginx
     - mariadb
     - php
-    - xdebug
-    - composer
     - app
