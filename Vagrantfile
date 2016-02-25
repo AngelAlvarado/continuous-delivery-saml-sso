@@ -53,9 +53,7 @@ Vagrant.configure("2") do |config|
     end
 
     config.vm.synced_folder "./", "/vagrant", type: "nfs"
-end
-
-config.vm.provision :shell, inline: <<SCRIPT
-  su vagrant -c 'cd /vagrant && build/install.sh;'
+    config.vm.provision :shell, inline: <<SCRIPT
+      su vagrant -c 'cd /vagrant && build/install.sh;'
 SCRIPT
-
+end
