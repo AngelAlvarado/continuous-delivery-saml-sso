@@ -10,6 +10,18 @@ server {
         try_files $uri $uri/ /index.php?$query_string;
     }
 
+    location /simplesaml {
+        alias /var/simplesaml/www;
+        try_files $uri $uri/ /index.php?$query_string;
+        location ~ \.php(/|$) {
+         fastcgi_split_path_info ^(.+?\.php)(/.+)$;
+         fastcgi_param PATH_INFO $fastcgi_path_info;
+         fastcgi_pass unix:/var/run/php5-fpm.sock;
+         fastcgi_index index.php;
+         include fastcgi_params;
+        }
+    }
+
     error_page 404 /404.html;
 
     error_page 500 502 503 504 /50x.html;
