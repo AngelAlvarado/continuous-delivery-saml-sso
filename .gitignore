@@ -6,7 +6,7 @@ settings.php
 .DS_Store
 ._*
 
-
+simplesamlphp/
 /vendor/
 vendor/
 www/
