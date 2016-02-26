@@ -1,5 +1,7 @@
-readme
-drupal 192.168.33.99
+Provisioning Drupal l
+
+Drupal IP: 192.168.33.99
 hostname: drupal7
 document root: /vagrant/www
-mariadb: passyuse: drupal7:drupal7:drupal7
+mariadb password, user, database: drupal7:drupal7:drupal7
+Drupal user, password: admin:admin
